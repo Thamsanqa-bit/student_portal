@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ly9z#_2&6n+hhz+j-i6+1$*hp#7%yylw)t6990h^9#9(3(w&at
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'dashboard.apps.DashboardConfig',
     'crispy_forms',
     'crispy_bootstrap4',
+    'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -127,6 +129,8 @@ STATICFILES_DIRS = [
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
